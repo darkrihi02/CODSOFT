@@ -1,0 +1,32 @@
+//Project 1 of my internship program in codsoft the prooject is 
+// Create a program that generates a random number and asks theuser to guess it. Provide feedback on whether the guess is too
+//high or too low until the user guesses the correct number.
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+int main(){
+    int number=(rand()%100)+1;
+    int guess=0;
+
+    do
+    {
+        cout<<"enter guess between 1-100"<<endl;
+        cin>>guess;
+
+        if(guess>number){
+        cout<<"guess lower nummber"<<endl;
+        }
+    else if(guess<number){
+    cout<<"guess higher number"<<endl;
+    }
+    else{
+        cout<<"yes you guessed the right answer"<<endl;
+    }
+    }
+    while(guess!=number);
+    
+    return 0;
+    }
